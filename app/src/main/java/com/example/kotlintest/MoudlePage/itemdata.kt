@@ -2,15 +2,17 @@ package com.example.kotlintest.MoudlePage
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName ="itemdata")
 class itemdata(
     //here to hold data in action item
-    @ColumnInfo(name="TitleColumn")
+    @PrimaryKey
+    @ColumnInfo(name = "Title")
     val Title:String,
     //hero for is check item
     //its false cause item its not checked by defult
-    @ColumnInfo(name="StatusColumn")
+
     val IsChecked:Boolean=false,
 )
 
