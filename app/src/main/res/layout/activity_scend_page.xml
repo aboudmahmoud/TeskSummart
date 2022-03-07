@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".ScendPage.ScendPage">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/vividred"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/confirm"
+        app:cornerRadius="@dimen/_1sdp"
+        app:rippleColor="#33AAAAAA"
+        app:strokeColor="@color/vividred"
+        app:strokeWidth="@dimen/_1sdp"/>
+</LinearLayout>
