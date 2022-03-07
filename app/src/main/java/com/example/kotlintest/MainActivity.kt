@@ -17,9 +17,10 @@ import java.lang.Exception
 class MainActivity : AppCompatActivity() {
 private lateinit var itewmAdpater:adpaterPage
 
-    private val ViewModel: ItemViewModel by viewModels {
+//Room Datapase doesnt Work
+    /*private val ViewModel: ItemViewModel by viewModels {
         ItemViewModelFactory((application as itemApclction).repository)
-    }
+    }*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,17 +28,16 @@ private lateinit var itewmAdpater:adpaterPage
         var count=intent.getIntExtra("Count",0)
         var mod=intent.getBooleanExtra("mod",true);
 
-    ViewModel.insert(itemdata("Fist item 1",false))
 
 
 
-        //  wordViewModel.insert()
-        var mutableList1 = mutableListOf(itemdata("Scend item",false),itemdata("thrid item",false),itemdata("Fourth item",false),itemdata("fifth item",false))
-        //var mutableList2= itemviewmoel.getAllItems
-      //  itemviewmoel.insert(itemdata("frist item",false))
 
 
-        itewmAdpater= adpaterPage(ViewModel.readAllData,this,count,mod)
+        var mutableList1 = mutableListOf(itemdata("Fist item ",false),itemdata("Scend item",false),itemdata("thrid item",false),itemdata("Fourth item",false),itemdata("fifth item",false))
+
+
+
+        itewmAdpater= adpaterPage(mutableList1,this,count,mod)
 
         RVItems.adapter=itewmAdpater
         RVItems.layoutManager=LinearLayoutManager(this)
